@@ -8,6 +8,11 @@ const routes: Routes = [
       import('./forms/forms.module').then((m) => m.FormsModule),
   },
   {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',

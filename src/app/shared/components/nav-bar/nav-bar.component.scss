@@ -5,5 +5,23 @@
 }
 
 .example-sidenav {
-  padding: 20px;
+  padding: 0px;
+}
+
+.menu-item {
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  margin-right: 70px;
+  width: 100%;
+  padding: 5px;
+  mat-icon {
+    margin-right: 5px;
+  }
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
 }

@@ -1,9 +1,15 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer opened="{{ isDrawerOpen }}" class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
+    <div class="menu-item" (click)="goToPage('dashboard')">
+      <mat-icon>dashboard</mat-icon> Dashboard
+    </div>
+    <div class="menu-item" (click)="goToPage('forms')">
+      <mat-icon>view_list</mat-icon> Forms
+    </div>
   </mat-drawer>
 
   <div class="container">
     <router-outlet></router-outlet>
   </div>
 </mat-drawer-container>
+<!-- opened="{{ isDrawerOpen }}" -->
