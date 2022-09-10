@@ -1,0 +1,70 @@
+<div class="create-form-container">
+  <span (click)="enableFormTitleEditMode()"
+    ><h1>
+      <input
+        [(ngModel)]="form.name"
+        [disabled]="formTitleEditMode"
+        (blur)="disableFormEditMode()"
+      /></h1
+  ></span>
+
+  <div
+    class="question-container"
+    *ngFor="let question of form?.questions; let i = index"
+  >
+    <span (click)="enableQuestionEditMode(question?.id)"
+      ><h2>
+        <input
+          [(ngModel)]="questionsEditModeValue[question?.id].statement"
+          [disabled]="questionsEditMode[question?.id]"
+          (blur)="disableQuestionEditMode(question?.id)"
+        /></h2
+    ></span>
+    <div class="options-container">
+      <div
+        class="options"
+        *ngFor="let option of question?.options; let i = index"
+      >
+        <span (click)="enableOptionEditMode(option?.id, optionEditInput)">
+          <mat-icon>radio_button_unchecked</mat-icon>
+          <input
+            [(ngModel)]="editOptionFormGroup[option?.id].value.value"
+            [disabled]="enableOptionsEditMode[option?.id]"
+            (blur)="disableEnableOptionEditMode(option?.id, question?.id)"
+          />
+        </span>
+
+        <div class="option-action-buttons-container">
+          <button
+            class="delete-option-button"
+            (click)="removeOption(option.id)"
+            matTooltip="Remover opção"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <button
+        (click)="createOption(question.id)"
+        class="add-option-button"
+        matTooltip="Adicionar nova opção"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+      <div class="question-action-buttons-container">
+        <button
+          (click)="removeQuestion(question.id)"
+          matTooltip="Deletar pergunta"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="form-action-buttons-container">
+    <button (click)="createQuestion()" matTooltip="Adicionar nova pergunta">
+      <mat-icon>add</mat-icon><span>Nova pergunta</span>
+    </button>
+  </div>
+</div>

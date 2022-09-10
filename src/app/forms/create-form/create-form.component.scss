@@ -1,0 +1,139 @@
+.create-form-container {
+  margin-top: 15px;
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    input {
+      border: none;
+      width: 100%;
+    }
+
+    input:enabled {
+      background-color: #fafafa;
+    }
+
+    input:focus {
+      background-color: #fafafa;
+    }
+
+    input:disabled {
+      color: black;
+      background-color: #fafafa;
+    }
+  }
+}
+
+.form-action-buttons-container {
+  button {
+    border: none;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.question-container {
+  border-top: 4px solid black;
+  padding: 10px;
+  margin: 15px;
+
+  input {
+    border: none;
+    width: 100%;
+  }
+
+  input:enabled {
+    background-color: #fafafa;
+  }
+
+  input:focus {
+    background-color: #fafafa;
+  }
+
+  input:disabled {
+    color: black;
+    background-color: #fafafa;
+  }
+}
+
+.options-container {
+  margin-bottom: 10px;
+}
+
+.options {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    mat-icon {
+      color: rgb(166, 166, 177);
+      margin-right: 5px;
+    }
+    input {
+      border: none;
+      width: 100%;
+    }
+
+    input:enabled {
+      background-color: #fafafa;
+    }
+
+    input:focus {
+      background-color: #fafafa;
+    }
+
+    input:disabled {
+      color: black;
+      background-color: #fafafa;
+    }
+  }
+}
+
+.options:hover {
+  border-bottom: 1px solid rgb(223, 221, 221);
+}
+
+.delete-option-button {
+  border: none;
+  background-color: #fafafa;
+  color: rgb(223, 221, 221);
+  margin: 0;
+}
+
+.question-action-buttons-container {
+  border-top: 1px solid rgb(223, 221, 221);
+  padding-top: 10px;
+  display: flex;
+  justify-content: end;
+  button {
+    border: none;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.add-option-button {
+  border: none;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+.add-option-form-field {
+  button {
+    border: none;
+    background-color: #fafafa;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+  }
+}
